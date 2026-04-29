@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadows Tennis Club</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }body {
+  background: #f5f7fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+nav {
+  background: #ffffff;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #1e3a8a;
+  color: white;
+  margin-top: 50px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shadows Tennis Club</h1>
+    <p>楽しく、強く、みんなで成長するテニスクラブ</p>
+  </header>  <nav>
+    <a href="#about">クラブ紹介</a>
+    <a href="#schedule">活動日</a>
+    <a href="#practice">練習内容</a>
+    <a href="#contact">連絡</a>
+  </nav>  <section>
+    <div class="card" id="about">
+      <h2>クラブ紹介</h2>
+      <p>
+        Shadows Tennis Club は、初心者から経験者まで楽しめるテニスクラブです。
+        基礎練習から試合形式まで、しっかり練習しながら仲間と成長していきます。
+      </p>
+    </div><div class="card" id="schedule">
+  <h2>活動日</h2>
+  <ul>
+    <li>月曜日：基礎練習</li>
+    <li>水曜日：試合形式練習</li>
+    <li>金曜日：サーブ・ボレー強化</li>
+    <li>土曜日：練習試合・大会対策</li>
+  </ul>
+</div>
+
+<div class="card" id="practice">
+  <h2>練習内容</h2>
+  <ul>
+    <li>ミニラリー</li>
+    <li>ストローク</li>
+    <li>サーブ＆リターン</li>
+    <li>ボレー・スマッシュ</li>
+    <li>ダブルス形式練習</li>
+    <li>試合形式</li>
+  </ul>
+</div>
+
+<div class="card" id="contact">
+  <h2>連絡</h2>
+  <p>
+    入部希望・体験参加は公式LINEまたは担当者までご連絡ください。
+  </p>
+  <a href="#" class="button">公式LINEはこちら</a>
+</div>
+
+  </section>  <footer>
+    <p>© 2026 Shadows Tennis Club</p>
+  </footer>
+</body>
+</html>
