@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="GATE SQUAREのニュース詳細">
+<title>ニュース詳細 | GATE SQUARE</title>
+
+<style>
+:root {
+  --bg: #07111f;
+  --panel: #101e32;
+  --text: #f1f7ff;
+  --muted: #a8bad0;
+  --cyan: #63e5ff;
+  --line: rgba(255,255,255,.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at top left, #163653, transparent 40rem),
+    var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", "Noto Sans JP", sans-serif;
+  line-height: 1.9;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(850px, 90%);
+  margin: auto;
+}
+
+header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(7,17,31,.94);
+}
+
+.header-inner {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.logo span {
+  color: var(--cyan);
+}
+
+.header-link {
+  color: var(--cyan);
+  font-size: 14px;
+}
+
+main {
+  min-height: 70vh;
+  padding: 55px 0 80px;
+}
+
+.breadcrumb {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 35px;
+}
+
+.breadcrumb a {
+  color: var(--cyan);
+}
+
+.label {
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.category {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 4px 10px;
+  border: 1px solid rgba(99,229,255,.4);
+  border-radius: 5px;
+  color: var(--cyan);
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(29px, 5vw, 46px);
+  line-height: 1.4;
+  margin: 15px 0;
+}
+
+.date {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.article {
+  margin-top: 30px;
+  padding: clamp(22px, 5vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+}
+
+.article p {
+  margin: 0 0 20px;
+}
+
+.article p:last-child {
+  margin-bottom: 0;
+}
+
+.article a {
+  color: var(--cyan);
+  text-decoration: underline;
+}
+
+.article-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 9px;
+  background: var(--cyan);
+  color: #07111f;
+  font-weight: 800;
+}
+
+.button-outline {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+
+.related {
+  margin-top: 55px;
+}
+
+.related h2 {
+  font-size: 23px;
+}
+
+.related-list {
+  display: grid;
+  gap: 12px;
+}
+
+.related-item {
+  display: block;
+  padding: 17px 20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.related-item:hover {
+  border-color: var(--cyan);
+}
+
+.related-item span {
+  display: block;
+  color: var(--cyan);
+  font-size: 12px;
+}
+
+.related-item strong {
+  display: block;
+  margin-top: 5px;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 25px 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media(max-width: 560px) {
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  main {
+    padding-top: 35px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="logo" href="index.html">GATE <span>SQUARE</span></a>
+    <a class="header-link" href="index.html#news">← 最新情報へ戻る</a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="breadcrumb">
+      <a href="index.html">トップページ</a>
+      ／
+      <a href="index.html#news">最新情報</a>
+      ／
+      <span>ニュース詳細</span>
+    </div>
+
+    <div class="label">NEWS & UPDATES</div>
+
+    <div id="articleArea">
+      <p>記事を読み込んでいます。</p>
+    </div>
+
+    <div class="article-nav">
+      <a class="button" href="index.html#news">← 最新情報へ戻る</a>
+      <a class="button-outline" href="index.html">トップページ</a>
+    </div>
+
+    <section class="related">
+      <h2>その他のお知らせ</h2>
+      <div class="related-list" id="relatedList"></div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> GATE SQUARE TECHNOLOGIES
+  </div>
+</footer>
+
+<script>
+const articles = {
+  "1": {
+    category: "お知らせ",
+    title: "GATE SQUARE公式サイトを公開",
+    date: "2026年10月9日",
+    content: `
+      <p>GATE SQUAREの公式ウェブサイトへようこそ。</p>
+
+      <p>
+        このサイトでは、GATE SQUAREの紹介や、
+        IT・ソフトウェア・デジタル技術に関する情報を発信していきます。
+      </p>
+
+      <p>
+        会社概要、事業内容、プロジェクト構想、おすすめ動画、
+        予約ページなど、GATE SQUAREに関する情報をまとめています。
+      </p>
+
+      <p>
+        今後も新しい情報やプロジェクトを掲載していく予定です。
+        ぜひ最新情報をご確認ください。
+      </p>
+    `
+  },
+
+  "2": {
+    category: "プロジェクト",
+    title: "デジタルプロジェクトの構想を紹介",
+    date: "2026年10月9日",
+    content: `
+      <p>GATE SQUAREのデジタルプロジェクト構想を紹介します。</p>
+
+      <p>
+        ソフトウェア、IoT、ネットワークなどの技術を活用し、
+        新しい仕組みやサービスの可能性を探っていきます。
+      </p>
+
+      <p>
+        プロジェクトの紹介では、目的や構想、技術的なテーマを
+        分かりやすく掲載することを目指します。
+      </p>
+
+      <p>
+        今後の進捗や関連情報も、このサイトで紹介していく予定です。
+      </p>
+    `
+  },
+
+  "3": {
+    category: "技術情報",
+    title: "テクノロジーに関する情報発信を開始",
+    date: "2026年10月9日",
+    content: `
+      <p>ITやデジタル技術に関する情報発信を始めます。</p>
+
+      <p>
+        ソフトウェア、ネットワーク、IoTなど、
+        さまざまな技術の情報を分かりやすく紹介していく予定です。
+      </p>
+
+      <p>
+        技術の基本的な仕組みや活用方法を整理し、
+        学習や新しいアイデアにつながる情報を目指します。
+      </p>
+
+      <p>
+        新しい記事やお知らせは、トップページの最新情報から確認できます。
+      </p>
+    `
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const article = articles[id];
+const articleArea = document.getElementById("articleArea");
+
+if (article) {
+  document.title = article.title + " | GATE SQUARE";
+
+  articleArea.innerHTML = `
+    <span class="category">${article.category}</span>
+    <h1>${article.title}</h1>
+    <p class="date">${article.date}</p>
+    <article class="article">${article.content}</article>
+  `;
+} else {
+  document.title = "記事が見つかりません | GATE SQUARE";
+
+  articleArea.innerHTML = `
+    <span class="category">NOT FOUND</span>
+    <h1>記事が見つかりません</h1>
+    <p class="date">指定された記事を表示できません。</p>
+    <article class="article">
+      <p>
+        指定されたニュースは存在しないか、
+        URLが間違っている可能性があります。
+      </p>
+      <p>
+        トップページの最新情報から、もう一度記事を選んでください。
+      </p>
+    </article>
+  `;
+}
+
+// 関連記事
+const relatedList = document.getElementById("relatedList");
+
+Object.entries(articles).forEach(([articleId, item]) => {
+  if (articleId === id) return;
+
+  const link = document.createElement("a");
+  link.className = "related-item";
+  link.href = "post.html?id=" + encodeURIComponent(articleId);
+
+  const category = document.createElement("span");
+  category.textContent = item.category;
+
+  const title = document.createElement("strong");
+  title.textContent = item.title;
+
+  link.append(category, title);
+  relatedList.appendChild(link);
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
