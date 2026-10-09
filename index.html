@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#07111f">
 <meta name="description" content="GATE SQUARE TECHNOLOGIES 公式サイト">
-<title>GATE SQUARE | Official Website</title>
+<title>GATE SQUARE | TECHNOLOGIES</title>
 
 <style>
 :root {
@@ -16,22 +16,18 @@
   --muted: #a8bad0;
   --cyan: #63e5ff;
   --blue: #7298ff;
-  --orange: #ff784f;
   --line: rgba(255,255,255,.14);
-  --shadow: 0 20px 60px rgba(0,0,0,.25);
 }
 
 body.light {
   --bg: #eef4fb;
   --panel: #ffffff;
-  --panel2: #f4f8ff;
-  --text: #12223a;
-  --muted: #53647a;
+  --panel2: #f5f8ff;
+  --text: #14243b;
+  --muted: #586980;
   --cyan: #007f9f;
   --blue: #315fd1;
-  --orange: #d94b24;
-  --line: rgba(20,40,70,.18);
-  --shadow: 0 20px 50px rgba(20,40,70,.10);
+  --line: rgba(20,40,70,.16);
 }
 
 * {
@@ -47,7 +43,7 @@ body {
   margin: 0;
   background:
     radial-gradient(ellipse at 10% 0%, rgba(40,110,160,.18), transparent 35rem),
-    radial-gradient(ellipse at 90% 25%, rgba(80,80,180,.15), transparent 30rem),
+    radial-gradient(ellipse at 90% 30%, rgba(80,80,180,.12), transparent 30rem),
     var(--bg);
   color: var(--text);
   font-family: "Segoe UI", "Noto Sans JP", sans-serif;
@@ -79,17 +75,18 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(18px);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  backdrop-filter: blur(16px);
 }
 
 .nav {
-  min-height: 76px;
+  min-height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 20px;
 }
 
 .logo {
@@ -106,14 +103,14 @@ header {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 14px;
   font-size: 13px;
 }
 
@@ -127,19 +124,15 @@ nav a:hover {
 }
 
 .tool-button {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
   background: var(--panel);
   color: var(--text);
-  border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 7px 10px;
-}
-
-.menu-button {
-  display: none;
 }
 
 section {
-  padding: 85px 0;
+  padding: 80px 0;
 }
 
 .section-label {
@@ -147,7 +140,6 @@ section {
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 3px;
-  text-transform: uppercase;
 }
 
 h2 {
@@ -179,28 +171,30 @@ h2 {
 }
 
 .hero::before {
-  width: 430px;
-  height: 430px;
+  width: 420px;
+  height: 420px;
   right: -70px;
   top: 100px;
-  border: 1px solid rgba(99,229,255,.25);
+  border: 1px solid rgba(99,229,255,.3);
   box-shadow:
     0 0 0 40px rgba(99,229,255,.025),
     0 0 0 80px rgba(99,229,255,.025),
-    0 0 90px rgba(99,229,255,.08);
+    0 0 100px rgba(99,229,255,.08);
 }
 
 .hero::after {
-  width: 230px;
-  height: 230px;
-  right: 30px;
-  top: 200px;
-  border: 1px dashed rgba(99,229,255,.35);
+  width: 250px;
+  height: 250px;
+  right: 15px;
+  top: 185px;
+  border: 1px dashed rgba(99,229,255,.4);
   animation: spin 35s linear infinite;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .hero-content {
@@ -234,17 +228,23 @@ h2 {
 .hero p {
   color: var(--muted);
   max-width: 620px;
-  font-size: 16px;
+}
+
+.hero-meta {
+  margin-top: 45px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
 .button {
   display: inline-block;
   padding: 12px 22px;
-  border-radius: 10px;
+  border-radius: 9px;
   background: linear-gradient(110deg, var(--cyan), var(--blue));
   color: #07111f;
   font-weight: 800;
-  border: 0;
+  border: none;
   transition: transform .2s, opacity .2s;
 }
 
@@ -255,24 +255,17 @@ h2 {
 
 .button-outline {
   display: inline-block;
-  padding: 11px 21px;
+  padding: 11px 20px;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 9px;
   margin-left: 8px;
-}
-
-.hero-meta {
-  margin-top: 55px;
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 2px;
 }
 
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
 .stat {
@@ -284,13 +277,13 @@ h2 {
 
 .stat strong {
   display: block;
-  font-size: 23px;
+  font-size: 24px;
   color: var(--cyan);
 }
 
 .stat span {
-  font-size: 12px;
   color: var(--muted);
+  font-size: 12px;
 }
 
 .grid {
@@ -303,9 +296,8 @@ h2 {
 .card {
   padding: 25px;
   border: 1px solid var(--line);
-  border-radius: 17px;
+  border-radius: 16px;
   background: linear-gradient(145deg, var(--panel2), var(--panel));
-  box-shadow: var(--shadow);
   transition: transform .25s, border-color .25s;
 }
 
@@ -324,7 +316,7 @@ h2 {
 }
 
 .icon {
-  font-size: 31px;
+  font-size: 30px;
   margin-bottom: 10px;
 }
 
@@ -338,13 +330,13 @@ h2 {
 .company-table {
   padding: 25px;
   border: 1px solid var(--line);
-  border-radius: 17px;
+  border-radius: 16px;
   background: var(--panel);
 }
 
 .company-row {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 110px 1fr;
   gap: 12px;
   padding: 13px 0;
   border-bottom: 1px solid var(--line);
@@ -359,10 +351,21 @@ h2 {
   color: var(--cyan);
 }
 
+.project-tag {
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.project-status {
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .news-toolbar {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 12px;
   margin: 25px 0;
 }
@@ -395,7 +398,6 @@ h2 {
   gap: 20px;
   padding: 24px 12px;
   border-bottom: 1px solid var(--line);
-  transition: background .2s;
 }
 
 .news-item:hover {
@@ -447,16 +449,32 @@ h2 {
   text-align: center;
 }
 
-.project-tag {
-  color: var(--cyan);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 2px;
+.article-detail {
+  display: none;
+  margin-top: 25px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel);
 }
 
-.project-status {
+.article-detail h3 {
+  font-size: 25px;
+}
+
+.article-detail p {
   color: var(--muted);
-  font-size: 12px;
+}
+
+.article-detail .close-article {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--cyan);
+  cursor: pointer;
+  border: 1px solid var(--line);
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: transparent;
 }
 
 .video-grid {
@@ -492,7 +510,7 @@ h2 {
 
 .booking-panel {
   padding: clamp(25px, 5vw, 45px);
-  border-radius: 20px;
+  border-radius: 18px;
   border: 1px solid rgba(99,229,255,.35);
   background:
     radial-gradient(ellipse at top right, rgba(99,229,255,.1), transparent 55%),
@@ -503,40 +521,21 @@ h2 {
   color: var(--muted);
 }
 
-.booking-button-area {
-  margin: 22px 0;
-}
-
-.booking-fallback {
-  color: var(--cyan);
-  text-decoration: underline;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+.contact-card {
+  max-width: 700px;
   margin-top: 30px;
 }
 
-.contact-box {
-  padding: 25px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--panel);
-}
-
-.contact-box p {
-  color: var(--muted);
-}
-
-.contact-box a {
+.email-address {
+  display: block;
+  margin: 18px 0;
   color: var(--cyan);
+  font-size: clamp(16px, 3vw, 22px);
   overflow-wrap: anywhere;
 }
 
 .clock-panel {
-  margin-top: 25px;
+  margin-top: 30px;
   padding: 20px;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -549,23 +548,22 @@ h2 {
   font-weight: 800;
 }
 
+.small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
 footer {
   padding: 35px 0;
   border-top: 1px solid var(--line);
-  background: rgba(0,0,0,.12);
 }
 
 .footer-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
   flex-wrap: wrap;
-}
-
-.small {
-  font-size: 12px;
-  color: var(--muted);
+  gap: 20px;
 }
 
 .back-top {
@@ -596,12 +594,11 @@ footer {
 
 @media (max-width: 650px) {
   section {
-    padding: 62px 0;
+    padding: 60px 0;
   }
 
   .grid,
-  .video-grid,
-  .contact-grid {
+  .video-grid {
     grid-template-columns: 1fr;
   }
 
@@ -621,21 +618,21 @@ footer {
     right: -200px;
   }
 
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
   .news-item {
     grid-template-columns: 1fr;
     gap: 5px;
   }
 
-  .company-row {
-    grid-template-columns: 100px 1fr;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
   .button-outline {
     margin: 12px 0 0;
+  }
+
+  .company-row {
+    grid-template-columns: 100px 1fr;
   }
 }
 
@@ -671,13 +668,8 @@ footer {
         <a href="#contact" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
       </nav>
 
-      <button class="tool-button" id="themeButton" type="button">
-        🌓
-      </button>
-
-      <button class="tool-button" id="languageButton" type="button">
-        EN
-      </button>
+      <button class="tool-button" id="themeButton" type="button" aria-label="テーマ切り替え">☀️</button>
+      <button class="tool-button" id="languageButton" type="button">EN</button>
     </div>
   </div>
 </header>
@@ -685,7 +677,6 @@ footer {
 <main>
 
 <!-- HERO -->
-
 <section class="hero">
   <div class="container hero-content">
     <span class="eyebrow">TECHNOLOGY · INNOVATION · FUTURE</span>
@@ -698,7 +689,7 @@ footer {
     <p>
       テクノロジーで、未来へのゲートを開く。<br>
       GATE SQUAREは、IT・ソフトウェア・デジタル技術の
-      可能性を探求し、新しい未来を構想するテクノロジーブランドです。
+      可能性を探求するテクノロジーブランドです。
     </p>
 
     <a class="button" href="#about">会社について</a>
@@ -726,11 +717,12 @@ footer {
 </section>
 
 <!-- ABOUT -->
-
 <section id="about">
   <div class="container">
     <div class="section-label">ABOUT US</div>
-    <h2>未来をつくる、技術の交差点。</h2>
+    <h2 data-ja="未来をつくる、技術の交差点。" data-en="Where Technology Shapes the Future.">
+      未来をつくる、技術の交差点。
+    </h2>
 
     <div class="about-layout">
       <div>
@@ -754,12 +746,12 @@ footer {
 
       <div class="company-table">
         <div class="company-row">
-          <strong>会社名</strong>
-          <span>GATE SQUARE TECHNOLOGIES</span>
+          <strong>ブランド名</strong>
+          <span>GATE SQUARE</span>
         </div>
         <div class="company-row">
-          <strong>ブランド</strong>
-          <span>GATE SQUARE</span>
+          <strong>名称</strong>
+          <span>GATE SQUARE TECHNOLOGIES</span>
         </div>
         <div class="company-row">
           <strong>事業分野</strong>
@@ -767,23 +759,22 @@ footer {
         </div>
         <div class="company-row">
           <strong>所在地</strong>
-          <span>岐阜県瑞浪市周辺（構想上の所在地）</span>
+          <span>岐阜県岐阜市</span>
         </div>
         <div class="company-row">
           <strong>企業理念</strong>
           <span>Open the Gate. Shape the Future.</span>
         </div>
-        <div class="company-row">
-          <strong>サイト</strong>
-          <span>GATE SQUARE Official Website</span>
-        </div>
       </div>
     </div>
+
+    <p class="small">
+      ※会社情報はサイトの構想に基づくサンプルです。
+    </p>
   </div>
 </section>
 
 <!-- SERVICES -->
-
 <section id="services">
   <div class="container">
     <div class="section-label">OUR SERVICES</div>
@@ -797,7 +788,7 @@ footer {
       <article class="card">
         <div class="icon">⌘</div>
         <h3>ソフトウェア開発</h3>
-        <p>Webサイトやアプリケーションなど、便利なデジタルサービスの企画・開発。</p>
+        <p>Webサイトやアプリケーションなど、便利なデジタルサービスを企画します。</p>
       </article>
 
       <article class="card">
@@ -809,32 +800,31 @@ footer {
       <article class="card">
         <div class="icon">⌘</div>
         <h3>ネットワーク・IT</h3>
-        <p>ネットワーク、サーバー、クラウドなど、デジタルサービスを支える技術。</p>
+        <p>ネットワーク、サーバー、クラウドなどの技術を探求します。</p>
       </article>
 
       <article class="card">
         <div class="icon">▣</div>
         <h3>IoT・電子工作</h3>
-        <p>センサーやマイコンを活用し、現実世界とデジタルをつなぐ仕組みを探求します。</p>
+        <p>センサーやマイコンを活用し、現実世界とデジタルをつなぎます。</p>
       </article>
 
       <article class="card">
         <div class="icon">✧</div>
         <h3>デジタルデザイン</h3>
-        <p>見やすさと使いやすさを大切にしたWebサイトやデジタルコンテンツを設計します。</p>
+        <p>見やすさと使いやすさを大切にしたWebサイトやコンテンツを設計します。</p>
       </article>
 
       <article class="card">
         <div class="icon">↗</div>
         <h3>技術研究・実験</h3>
-        <p>新しい技術を学び、試作や実験を通じてアイデアを具体的な形にしていきます。</p>
+        <p>新しい技術を学び、試作や実験を通じてアイデアを形にしていきます。</p>
       </article>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-
 <section id="projects">
   <div class="container">
     <div class="section-label">PROJECTS</div>
@@ -862,7 +852,7 @@ footer {
       <article class="card">
         <div class="project-tag">PROJECT 03</div>
         <h3>GATE DIGITAL</h3>
-        <p>Web技術を活用して情報を発信するデジタルプラットフォームの構想。</p>
+        <p>Web技術を活用したデジタルプラットフォームの構想。</p>
         <span class="project-status">STATUS：PLANNING</span>
       </article>
     </div>
@@ -870,15 +860,14 @@ footer {
 </section>
 
 <!-- NEWS -->
-
 <section id="news">
   <div class="container">
     <div class="section-label">NEWS & UPDATES</div>
     <h2>最新情報</h2>
 
     <p class="section-intro">
-      GATE SQUAREからのお知らせをご紹介します。
-      キーワードやカテゴリーで絞り込み、詳細ページを開けます。
+      GATE SQUAREからのお知らせです。
+      キーワードやカテゴリーで絞り込み、詳細を確認できます。
     </p>
 
     <div class="news-toolbar">
@@ -905,7 +894,7 @@ footer {
           <span class="news-category">お知らせ</span>
           <h3>GATE SQUARE公式サイトを公開</h3>
           <p>GATE SQUAREの公式ウェブサイトを公開しました。</p>
-          <a class="news-read" href="post.html?id=1">詳細を見る →</a>
+          <a class="news-read" href="#news" data-article="1">詳細を見る →</a>
         </div>
       </article>
 
@@ -915,7 +904,7 @@ footer {
           <span class="news-category">プロジェクト</span>
           <h3>デジタルプロジェクトの構想を紹介</h3>
           <p>ソフトウェアやIoTなどの技術に関する構想を紹介します。</p>
-          <a class="news-read" href="post.html?id=2">詳細を見る →</a>
+          <a class="news-read" href="#news" data-article="2">詳細を見る →</a>
         </div>
       </article>
 
@@ -925,7 +914,7 @@ footer {
           <span class="news-category">技術情報</span>
           <h3>テクノロジーに関する情報発信を開始</h3>
           <p>ITやデジタル技術に関する情報を掲載していく予定です。</p>
-          <a class="news-read" href="post.html?id=3">詳細を見る →</a>
+          <a class="news-read" href="#news" data-article="3">詳細を見る →</a>
         </div>
       </article>
 
@@ -935,14 +924,23 @@ footer {
       該当するニュースが見つかりませんでした。
     </div>
 
+    <article class="article-detail" id="articleDetail" aria-live="polite">
+      <span class="news-category" id="detailCategory"></span>
+      <h3 id="detailTitle"></h3>
+      <p class="small" id="detailDate"></p>
+      <div id="detailContent"></div>
+      <button class="close-article" id="closeArticle" type="button">
+        記事を閉じる ×
+      </button>
+    </article>
+
     <p class="small">
-      ※ニュースはサンプルです。実際のお知らせに合わせて編集してください。
+      ※掲載されているニュースはおもろい
     </p>
   </div>
 </section>
 
 <!-- VIDEOS -->
-
 <section id="videos">
   <div class="container">
     <div class="section-label">VIDEOS</div>
@@ -965,8 +963,10 @@ footer {
           </iframe>
         </div>
 
-        <h3>おすすめ動画</h3>
-        <p class="small">YouTubeの埋め込み動画です。</p>
+        <h3>YouTube動画</h3>
+        <p class="small">
+          動画が再生できない場合はYouTubeで直接開いてください。
+        </p>
 
         <a class="news-read"
            href="https://youtu.be/TaNlrxTlIfM"
@@ -994,7 +994,6 @@ footer {
 </section>
 
 <!-- BOOKING -->
-
 <section id="booking">
   <div class="container">
     <div class="section-label">APPOINTMENT</div>
@@ -1012,56 +1011,318 @@ footer {
         ご希望の日時を選択し、予約ページの案内に従ってください。
       </p>
 
-      <div class="booking-button-area">
-        <a class="button"
-           href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3M11pBoEMT-xvzebUbMKYdJwkzr1fftSnm-AcxTU_k_JPOBp7S6OMqilIJiI9ENBZATFjNj2yE?gv=true"
-           target="_blank"
-           rel="noopener noreferrer">
-          予約を作成 →
-        </a>
-      </div>
-
-      <p class="small">
-        ※Googleカレンダー側で予約受付が有効になっている必要があります。
-      </p>
-
-      <a class="booking-fallback"
+      <a class="button"
          href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3M11pBoEMT-xvzebUbMKYdJwkzr1fftSnm-AcxTU_k_JPOBp7S6OMqilIJiI9ENBZATFjNj2yE?gv=true"
          target="_blank"
          rel="noopener noreferrer">
-        予約ページを別画面で開く ↗
+        予約を作成 →
       </a>
-      
-      <!-- CONTACT -->
+
+      <p class="small" style="margin-top:20px">
+        ※Googleカレンダー側で予約受付が有効になっている必要があります。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <div class="section-label">CONTACT</div>
     <h2>お問い合わせ</h2>
 
     <p class="section-intro">
-      GATE SQUAREへのお問い合わせはこちらから。
+      GATE SQUAREへのご質問やご連絡は、メールでお問い合わせください。
     </p>
 
-    <div class="grid">
-      <div class="card">
-        <div class="icon">✉️</div>
-        <h3>メールでお問い合わせ</h3>
-        <p>
-          ご質問やご連絡は、以下のメールアドレスまでお願いします。
-        </p>
+    <div class="card contact-card">
+      <div class="icon">✉️</div>
+      <h3>メールでお問い合わせ</h3>
 
-        <a class="button"
-           href="mailto:Razupai_it@outlook.com">
-          メールを送る →
-        </a>
+      <p>
+        以下のメールアドレスからお問い合わせいただけます。
+      </p>
 
-        <p style="margin-top: 18px; overflow-wrap: anywhere;">
-          <a href="mailto:Razupai_it@outlook.com">
-            Razupai_it@outlook.com
-          </a>
-        </p>
-        
-      </div>
+      <a class="email-address" href="mailto:Razupai_it@outlook.com">
+        Razupai_it@outlook.com
+      </a>
+
+      <a class="button" href="mailto:Razupai_it@outlook.com">
+        メールを送る →
+      </a>
     </div>
   </div>
 </section>
+
+<!-- CLOCK -->
+<section>
+  <div class="container">
+    <div class="section-label">JAPAN STANDARD TIME</div>
+    <h2>現在時刻</h2>
+
+    <div class="clock-panel">
+      <div class="clock-time" id="clock">--:--:--</div>
+      <div class="small" id="clockDate"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <div class="logo">GATE <span>SQUARE</span></div>
+      <div class="small">GATE SQUARE TECHNOLOGIES</div>
+    </div>
+
+    <div class="small">
+      © <span id="year"></span> GATE SQUARE
+    </div>
+
+    <a class="back-top" href="#top">ページ上部へ ↑</a>
+  </div>
+</footer>
+
+<script>
+// ======================================
+// フッターの年
+// ======================================
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+// ======================================
+// ニュース記事データ
+// ======================================
+
+const articles = {
+  "1": {
+    category: "お知らせ",
+    title: "GATE SQUARE公式サイトを公開",
+    date: "2026年10月9日",
+    content: [
+      "GATE SQUAREのウェブサイトへようこそ。",
+      "このサイトでは、GATE SQUAREの紹介や、IT・ソフトウェア・デジタル技術に関する情報を発信していきます。",
+      "会社概要、事業内容、プロジェクト構想、おすすめ動画、予約ページなど、さまざまな情報をまとめています。",
+      "今後も新しい情報を掲載していく予定です。ぜひ最新情報をご確認ください。"
+    ]
+  },
+
+  "2": {
+    category: "プロジェクト",
+    title: "デジタルプロジェクトの構想を紹介",
+    date: "2026年10月9日",
+    content: [
+      "GATE SQUAREのデジタルプロジェクト構想を紹介します。",
+      "ソフトウェア、IoT、ネットワークなどの技術を活用し、新しい仕組みやサービスの可能性を探っていきます。",
+      "各プロジェクトの目的や構想、技術的なテーマを分かりやすく紹介していく予定です。"
+    ]
+  },
+
+  "3": {
+    category: "技術情報",
+    title: "テクノロジーに関する情報発信を開始",
+    date: "2026年10月9日",
+    content: [
+      "ITやデジタル技術に関する情報発信を始めます。",
+      "ソフトウェア、ネットワーク、IoTなど、さまざまな技術の情報を紹介していく予定です。",
+      "技術の基本的な仕組みや活用方法を整理し、学習や新しいアイデアにつながる情報を目指します。"
+    ]
+  }
+};
+
+
+// ======================================
+// ニュース検索・カテゴリー絞り込み
+// ======================================
+
+const newsSearch = document.getElementById("newsSearch");
+const newsCategory = document.getElementById("newsCategory");
+const newsItems = [...document.querySelectorAll(".news-item")];
+const newsEmpty = document.getElementById("newsEmpty");
+
+function filterNews() {
+  const keyword = newsSearch.value.trim().toLowerCase();
+  const category = newsCategory.value;
+  let visibleCount = 0;
+
+  newsItems.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    const itemCategory = item.dataset.category;
+
+    const keywordMatch = text.includes(keyword);
+    const categoryMatch =
+      category === "all" || category === itemCategory;
+
+    const visible = keywordMatch && categoryMatch;
+
+    item.style.display = visible ? "grid" : "none";
+
+    if (visible) {
+      visibleCount++;
+    }
+  });
+
+  newsEmpty.style.display =
+    visibleCount === 0 ? "block" : "none";
+}
+
+newsSearch.addEventListener("input", filterNews);
+newsCategory.addEventListener("change", filterNews);
+
+
+// ======================================
+// ニュース詳細を同じページに表示
+// ======================================
+
+const articleDetail = document.getElementById("articleDetail");
+const detailCategory = document.getElementById("detailCategory");
+const detailTitle = document.getElementById("detailTitle");
+const detailDate = document.getElementById("detailDate");
+const detailContent = document.getElementById("detailContent");
+
+document.querySelectorAll("[data-article]").forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+
+    const id = link.dataset.article;
+    const article = articles[id];
+
+    if (!article) return;
+
+    detailCategory.textContent = article.category;
+    detailTitle.textContent = article.title;
+    detailDate.textContent = article.date;
+
+    detailContent.replaceChildren();
+
+    article.content.forEach(text => {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = text;
+      detailContent.appendChild(paragraph);
+    });
+
+    articleDetail.style.display = "block";
+
+    articleDetail.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+    history.replaceState(null, "", "#news-" + id);
+  });
+});
+
+document.getElementById("closeArticle").addEventListener("click", () => {
+  articleDetail.style.display = "none";
+  history.replaceState(null, "", "#news");
+});
+
+
+// URLに記事番号がある場合も表示
+function openArticleFromHash() {
+  const match = location.hash.match(/^#news-(\d+)$/);
+
+  if (!match) return;
+
+  const id = match[1];
+  const link = document.querySelector('[data-article="' + id + '"]');
+
+  if (link) {
+    link.click();
+  }
+}
+
+window.addEventListener("load", () => {
+  openArticleFromHash();
+});
+
+
+// ======================================
+// ダーク・ライトモード
+// ======================================
+
+const themeButton = document.getElementById("themeButton");
+
+if (localStorage.getItem("gs-theme") === "light") {
+  document.body.classList.add("light");
+}
+
+function updateThemeButton() {
+  themeButton.textContent =
+    document.body.classList.contains("light") ? "🌙" : "☀️";
+}
+
+updateThemeButton();
+
+themeButton.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+
+  localStorage.setItem(
+    "gs-theme",
+    document.body.classList.contains("light") ? "light" : "dark"
+  );
+
+  updateThemeButton();
+});
+
+
+// ======================================
+// 日本語・英語切り替え
+// ======================================
+
+let currentLanguage = "ja";
+const languageButton = document.getElementById("languageButton");
+
+languageButton.addEventListener("click", () => {
+  currentLanguage = currentLanguage === "ja" ? "en" : "ja";
+
+  document.documentElement.lang = currentLanguage;
+
+  languageButton.textContent =
+    currentLanguage === "ja" ? "EN" : "日本語";
+
+  document.querySelectorAll("[data-ja][data-en]").forEach(element => {
+    element.textContent =
+      currentLanguage === "ja"
+        ? element.dataset.ja
+        : element.dataset.en;
+  });
+});
+
+
+// ======================================
+// 日本時間の時計
+// ======================================
+
+function updateClock() {
+  const now = new Date();
+
+  document.getElementById("clock").textContent =
+    new Intl.DateTimeFormat("ja-JP", {
+      timeZone: "Asia/Tokyo",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false
+    }).format(now);
+
+  document.getElementById("clockDate").textContent =
+    new Intl.DateTimeFormat("ja-JP", {
+      timeZone: "Asia/Tokyo",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      weekday: "long"
+    }).format(now);
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+
+</script>
+
+</body>
+</html>
